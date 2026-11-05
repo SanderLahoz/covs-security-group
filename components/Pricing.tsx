@@ -13,21 +13,21 @@ interface Pack {
 const packs: readonly Pack[] = [
   {
     name: "Indledende tjek",
-    price: "[Fast pris]",
+    price: "Kontakt os",
     priceNote: "Ingen binding",
     features: ["Skriftlig aftale", "Hurtigt overblik over risici", "Uforpligtende samtale"],
     highlighted: false,
   },
   {
     name: "Fuld rapport",
-    price: "[Fast pris]",
+    price: "Kontakt os",
     priceNote: "Aftalt på forhånd",
     features: ["Grundig test", "Rapport på almindeligt dansk", "Hvad skal rettes først"],
     highlighted: true,
   },
   {
     name: "Rettelser",
-    price: "[Efter aftale]",
+    price: "Kontakt os",
     priceNote: "Du vælger selv",
     features: ["Fast pris pr. rettelse", "Du godkender alt først", "Ingen abonnement"],
     highlighted: false,
@@ -52,9 +52,8 @@ export default function Pricing() {
           {packs.map((p) => (
             <article
               key={p.name}
-              className={`relative flex flex-col rounded-2xl border bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/60 hover:shadow-xl hover:shadow-navy-900/10 ${
-                p.highlighted ? "border-brand-500 border-2" : "border-cream-300"
-              }`}
+              className={`relative flex flex-col rounded-2xl border bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/60 hover:shadow-xl hover:shadow-navy-900/10 ${p.highlighted ? "border-brand-500 border-2" : "border-cream-300"
+                }`}
             >
               {p.highlighted && (
                 <span className="absolute -top-3 left-8 rounded-full bg-brand-500 px-3 py-1 text-xs font-bold text-white">

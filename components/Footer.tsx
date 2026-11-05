@@ -65,7 +65,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-6 text-xs text-slate-500 sm:flex-row sm:justify-between">
           <p>
-            © {new Date().getFullYear()} {site.brandName}. [CVR-nummer]
+            © {new Date().getFullYear()} {site.brandName}.
           </p>
           <p>Et studenterinitiativ. Ikke en officiel del af ITU.</p>
         </div>

@@ -20,12 +20,12 @@ export interface SiteConfig {
 
 export const site: SiteConfig = {
   // TODO: Udskift med jeres rigtige brandnavn
-  brandName: "SecuriLocal ITU",
-  logoPlaceholder: "[Logo]",
+  brandName: "COVS",
+  logoPlaceholder: "",
   // TODO: Udskift med jeres rigtige domæne og telefonnummer
-  email: "kontakt@dit-domaene.dk",
-  phoneDisplay: "+45 00 00 00 00",
-  phoneHref: "+4500000000",
+  email: "covsgroup@protonmail.com",
+  phoneDisplay: "",
+  phoneHref: "",
   university: "IT-Universitetet i København (ITU)",
   nav: [
     { label: "Sådan foregår det", href: "#sadan-foregar-det" },

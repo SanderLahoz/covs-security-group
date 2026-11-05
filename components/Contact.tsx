@@ -33,22 +33,6 @@ export default function Contact() {
                   </span>
                 </span>
               </a>
-              <a
-                href={`tel:${site.phoneHref}`}
-                className="flex items-center gap-4 rounded-xl bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/20"
-              >
-                <span className="icon-chip">
-                  <PhoneIcon className="h-6 w-6" />
-                </span>
-                <span>
-                  <span className="block text-xs font-bold uppercase tracking-wider text-navy-500">
-                    Telefon
-                  </span>
-                  <span className="block text-sm font-bold text-navy-900">
-                    {site.phoneDisplay}
-                  </span>
-                </span>
-              </a>
             </div>
 
             <p className="mt-6 text-sm text-white/75">
