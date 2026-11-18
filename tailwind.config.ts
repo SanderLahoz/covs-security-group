@@ -1,7 +1,14 @@
 import type { Config } from "tailwindcss";
 
-const config: Config = {
-  content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
+/**
+ * OBS: tailwind.config blev ikke inkluderet i den oprindelige Next.js-mappe
+ * (kun app/, lib/ og components/). Paletten og animationerne nedenfor er
+ * udledt af klasserne (brand-*, cream-*, navy-*, animate-fade-up, animate-float)
+ * og farverne i illustrationerne. Erstat med jeres originale tailwind.config,
+ * hvis I har den – bare husk at `content` peger på .vue-filer.
+ */
+export default {
+  content: ["./index.html", "./src/**/*.{vue,ts}"],
   theme: {
     extend: {
       colors: {
@@ -61,6 +68,4 @@ const config: Config = {
     },
   },
   plugins: [],
-};
-
-export default config;
+} satisfies Config;

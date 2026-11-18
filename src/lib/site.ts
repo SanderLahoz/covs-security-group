@@ -10,6 +10,7 @@ export interface NavLink {
 
 export interface SiteConfig {
   brandName: string;
+  brandNameExtended: string;
   logoPlaceholder: string;
   email: string;
   phoneDisplay: string;
@@ -21,6 +22,7 @@ export interface SiteConfig {
 export const site: SiteConfig = {
   // TODO: Udskift med jeres rigtige brandnavn
   brandName: "COVS",
+  brandNameExtended: "COVS Group",
   logoPlaceholder: "",
   // TODO: Udskift med jeres rigtige domæne og telefonnummer
   email: "covsgroup@protonmail.com",
