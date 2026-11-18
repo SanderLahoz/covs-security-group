@@ -16,22 +16,35 @@ const packs: readonly Pack[] = [
   {
     name: "Indledende tjek",
     price: "Kontakt os",
-    priceNote: "Ingen binding",
-    features: ["Skriftlig aftale", "Hurtigt overblik over risici", "Uforpligtende samtale"],
+    priceNote: "Du vælger selv",
+    features: [
+      "Få en vurdering af din side",
+      "Du godkender alt først",
+      "Skriftlig aftale",
+    ],
     highlighted: false,
   },
   {
-    name: "Fuld rapport",
+    name: "Indledende tjek + rettelser",
     price: "Kontakt os",
-    priceNote: "Aftalt på forhånd",
-    features: ["Grundig test", "Rapport på almindeligt dansk", "Hvad skal rettes først"],
+    priceNote: "Ingen binding",
+    features: [
+      "Uforpligtende samtale",
+      "Hurtigt overblik over risici",
+      "Gratis indledende tjek",
+      "Skriftlig aftale",
+    ],
     highlighted: true,
   },
   {
     name: "Rettelser",
     price: "Kontakt os",
     priceNote: "Du vælger selv",
-    features: ["Fast pris pr. rettelse", "Du godkender alt først", "Ingen abonnement"],
+    features: [
+      "Fast pris pr. rettelse",
+      "Du godkender alt først",
+      "Skriftlig aftale",
+    ],
     highlighted: false,
   },
 ];
@@ -76,11 +89,20 @@ export default defineComponent({
             Mest valgt
           </span>
           <h3 class="text-lg font-bold text-navy-900">{{ p.name }}</h3>
-          <p class="mt-4 text-3xl font-extrabold text-navy-900">{{ p.price }}</p>
+          <p class="mt-4 text-3xl font-extrabold text-navy-900">
+            {{ p.price }}
+          </p>
           <p class="mt-1 text-sm text-navy-500">{{ p.priceNote }}</p>
           <ul class="mt-8 flex-1 space-y-3 border-t border-cream-300 pt-8">
-            <li v-for="f in p.features" :key="f" class="flex gap-3 text-sm font-medium text-navy-700">
-              <Icon name="check" class="mt-0.5 h-4 w-4 shrink-0 text-brand-500" />
+            <li
+              v-for="f in p.features"
+              :key="f"
+              class="flex gap-3 text-sm font-medium text-navy-700"
+            >
+              <Icon
+                name="check"
+                class="mt-0.5 h-4 w-4 shrink-0 text-brand-500"
+              />
               {{ f }}
             </li>
           </ul>

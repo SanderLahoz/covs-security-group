@@ -12,9 +12,12 @@ export default defineComponent({
   components: { Icon },
   props: {
     /** "onLight" til lyse baggrunde, "onDark" til mørke (fx footer) */
-    tone: { type: String as PropType<"onLight" | "onDark">, default: "onLight" },
+    tone: {
+      type: String as PropType<"onLight" | "onDark">,
+      default: "onLight",
+    },
     /** Vis det lille "[Logo]"-placeholder-felt ved siden af skjoldet */
-    showPlaceholderBox: { type: Boolean, default: true },
+    showPlaceholderBox: { type: Boolean, default: false },
   },
   data() {
     return { site };
@@ -29,13 +32,17 @@ export default defineComponent({
 
 <template>
   <span class="inline-flex items-center gap-3">
-    <span class="grid h-10 w-10 place-items-center rounded-full bg-brand-500 text-white">
+    <span
+      class="grid h-10 w-10 place-items-center rounded-full bg-brand-500 text-white"
+    >
       <Icon name="shieldCheck" class="h-5 w-5" />
     </span>
     <span
       v-if="showPlaceholderBox"
       :class="`hidden rounded border border-dashed px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wider sm:inline ${
-        dark ? 'border-white/30 text-white/60' : 'border-navy-400/50 text-navy-500'
+        dark
+          ? 'border-white/30 text-white/60'
+          : 'border-navy-400/50 text-navy-500'
       }`"
     >
       {{ site.logoPlaceholder }}

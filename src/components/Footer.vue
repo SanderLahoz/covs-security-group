@@ -17,7 +17,9 @@ export default defineComponent({
 
 <template>
   <footer class="bg-navy-900 text-slate-300">
-    <div class="mx-auto grid max-w-6xl gap-12 px-6 py-16 md:grid-cols-[1.4fr_1fr_1fr]">
+    <div
+      class="mx-auto grid max-w-6xl gap-12 px-6 py-16 md:grid-cols-[1.4fr_1fr_1fr]"
+    >
       <div>
         <a href="#top" :aria-label="`${site.brandName}, til toppen`">
           <Logo tone="onDark" />
@@ -52,6 +54,9 @@ export default defineComponent({
       <div>
         <h2 class="text-sm font-bold text-white">Kontakt</h2>
         <ul class="mt-5 space-y-3 text-sm">
+          <li class="text-slate-400">
+            Continuous Offensive Validation & Security Group
+          </li>
           <li>
             <a
               :href="`mailto:${site.email}`"
@@ -74,10 +79,10 @@ export default defineComponent({
     </div>
 
     <div class="border-t border-white/10">
-      <div class="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-6 text-xs text-slate-500 sm:flex-row sm:justify-between">
-        <p>
-          © {{ year }} {{ site.brandName }}.
-        </p>
+      <div
+        class="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-6 text-xs text-slate-500 sm:flex-row sm:justify-between"
+      >
+        <p>© {{ year }} {{ site.brandNameExtended }}</p>
         <p>Et studenterinitiativ. Ikke en officiel del af ITU.</p>
       </div>
     </div>

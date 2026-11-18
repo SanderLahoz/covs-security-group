@@ -18,11 +18,11 @@ const items: readonly FaqItem[] = [
     answer:
       "Nej. Vores test er skånsomme. Vi leder efter svagheder, men ændrer eller sletter intet.",
   },
-  {
-    question: "Hvad koster det?",
-    answer:
-      "Det indledende tjek har en fast, åben pris. Skal noget rettes, vælger du selv, hvad du vil betale for.",
-  },
+  // {
+  //   question: "Hvad koster det?",
+  //   answer:
+  //     "Det indledende tjek har en fast, åben pris. Skal noget rettes, vælger du selv, hvad du vil betale for.",
+  // },
   {
     question: "Hvorfor har min restaurant eller butik brug for dette?",
     answer:
@@ -85,7 +85,9 @@ export default defineComponent({
               <Icon
                 name="chevronDown"
                 :class="`h-5 w-5 shrink-0 transition-all duration-300 ${
-                  openIndex === i ? 'rotate-180 text-brand-500' : 'text-navy-500'
+                  openIndex === i
+                    ? 'rotate-180 text-brand-500'
+                    : 'text-navy-500'
                 }`"
               />
             </button>

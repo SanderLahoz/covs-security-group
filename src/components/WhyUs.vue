@@ -18,7 +18,7 @@ const reasons: readonly Reason[] = [
   },
   {
     title: "Små virksomheder",
-    text: "Vi bygger til caféer, frisører og butikker, hvor tid og budget er knappe.",
+    text: "Vi hjælper mindre virksomheder, hvor tid og budget er knappe.",
     icon: "store",
   },
   {
@@ -51,13 +51,15 @@ export default defineComponent({
           Faglig viden og lokal service
         </h2>
         <p class="mt-5 text-lg leading-relaxed text-navy-700">
-          Vi er IT-studerende fra IT-Universitetet i København. God
-          IT-sikkerhed skal ikke kun være for de store virksomheder.
+          Vi er IT-studerende fra IT-Universitetet i København. God IT-sikkerhed
+          skal ikke kun være for de store virksomheder.
         </p>
 
         <ul class="mt-10 grid gap-x-8 gap-y-8 sm:grid-cols-2">
           <li v-for="r in reasons" :key="r.title" class="group">
-            <span class="icon-chip transition-all duration-300 group-hover:-translate-y-1 group-hover:bg-brand-500 group-hover:text-white">
+            <span
+              class="icon-chip transition-all duration-300 group-hover:-translate-y-1 group-hover:bg-brand-500 group-hover:text-white"
+            >
               <Icon :name="r.icon" class="h-6 w-6" />
             </span>
             <h3 class="mt-4 text-lg font-bold text-navy-900">{{ r.title }}</h3>
@@ -66,7 +68,9 @@ export default defineComponent({
         </ul>
       </div>
 
-      <TeamIllustration class-name="order-1 mx-auto w-full max-w-md lg:order-2 lg:max-w-none" />
+      <TeamIllustration
+        class-name="order-1 mx-auto w-full max-w-md lg:order-2 lg:max-w-none"
+      />
     </div>
   </section>
 </template>
